@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/springDataSourceDemo">
+
+    <!-- Specify a JDBC datasource -->
+    
+     <Resource name="jdbc/aaiDataSource" 
+     		auth="Container"
+            type="javax.sql.DataSource" 
+            driverClassName="oracle.jdbc.driver.OracleDriver"
+            url="jdbc:oracle:thin:@199.233.228.3:1521:xe"
+            username="sysdbo" 
+            password="orapdipa$$"
+            removeAbandoned="true"
+         	removeAbandonedTimeout="90"
+         	logAbandoned="true"
+            maxActive="20" maxIdle="10" maxWait="-1"/>
+              
+    <!-- Resource name="jdbc/mydatabase" 
+              auth="Container"
+              type="javax.sql.DataSource" 
+              username="YOUR_USERNAME" 
+              password="YOUR_PASSWORD"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://mysql.metawerx.net:3306/YOUR_DATABASE_NAME?autoReconnect=true"
+              validationQuery="select 1"
+              maxActive="10" 
+              maxIdle="4"/> -->
+   
+
+    <!-- Specify the security realm and location of the users file
+    <Realm className="org.apache.catalina.realm.MemoryRealm" 
+           pathname="/tomcat/webapps/ROOT/WEB-INF/users.xml" />
+    -->
+</Context>
+
